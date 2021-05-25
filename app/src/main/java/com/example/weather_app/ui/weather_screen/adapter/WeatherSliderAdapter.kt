@@ -92,7 +92,7 @@ class WeatherSliderAdapter(
         return when (description) {
             "light rain" -> R.drawable.ligthrain
             "scattered clouds" -> R.drawable.scatteredcloud
-            "sky is clear" -> R.drawable.clearsky
+            "clear sky" -> R.drawable.clearsky
             "heavy intensity rain" -> R.drawable.heavyrain
             "few clouds" -> R.drawable.fewclouds
             "moderate rain" -> R.drawable.moderaterain
@@ -110,18 +110,18 @@ class WeatherSliderAdapter(
     }
 
     fun getWeatherColor(description: String): ColorGradient {
-        return when (description) {
+         return when (description) {
             "light rain" -> ColorGradient(getColor(R.color.black),getColor(R.color.lightBlack))
             "scattered clouds" -> ColorGradient(getColor(R.color.blue),getColor(R.color.lightBlue))
-            "sky is clear" -> ColorGradient(getColor(R.color.orange),getColor(R.color.orange))
+            "sky is clear" -> ColorGradient(getColor(R.color.orange),getColor(R.color.lightOrange))
             "heavy intensity rain" -> ColorGradient(getColor(R.color.blue),getColor(R.color.lightBlue))
-            "few clouds" -> ColorGradient(getColor(R.color.orange),getColor(R.color.white))
+            "few clouds" -> ColorGradient(getColor(R.color.orange),getColor(R.color.lightOrange))
             "moderate rain" -> ColorGradient(getColor(R.color.blue),getColor(R.color.lightBlue))
             "broken clouds" -> ColorGradient(getColor(R.color.blue),getColor(R.color.lightBlue))
             "overcast clouds" -> ColorGradient(getColor(R.color.black),getColor(R.color.lightBlack))
             "light shower snow" -> ColorGradient(getColor(R.color.black),getColor(R.color.lightBlack))
             "snow" -> ColorGradient(getColor(R.color.black),getColor(R.color.lightBlack))
-            else -> ColorGradient(getColor(R.color.black),getColor(R.color.lightBlack))
+            else -> ColorGradient(getColor(R.color.orange),getColor(R.color.lightOrange))
         }
     }
 
